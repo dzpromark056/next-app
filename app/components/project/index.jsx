@@ -6,6 +6,7 @@ export default function index({index, title, setModal, description, technology})
 
     return (
         <div onMouseEnter={() => {setModal({active: true, index})}} onMouseLeave={() => {setModal({active: false, index})}} className={styles.project}>
+            <h2 className='p-10 text-white text-1xl'>Hover me!</h2>
             <h2 className='p-10 text-white'>{title}</h2>
             <p className='text-sm text-white'>{description}</p>
             <br />
