@@ -29,7 +29,7 @@ function Footer({scrollProgress}) {
     <motion.div style={{y}} className='h-full  flex  items-center justify-center  gap-5'>
         {
             [...Array(5)].map((_,i)=>{
-                return <img className='h-[80px] w-[80px]' key={i + 'i'} src={`/public/media/${i +1}.jpg`} alt="" />
+                return <img className='h-[80px] w-[80px]' key={i + 'i'} src={`./media/${i +1}.jpg`} alt="" />
             })
         }
     </motion.div>
