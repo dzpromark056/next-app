@@ -16,12 +16,12 @@ function Hero() {
   return (
     <div className='border-b border-neutral-teal-900 pb-10'>
         <div className='flex flex-wrap'>
-                <div className='w-full lg:w-1/2 flex flex-col items-center text-white'>
+                <div className='w-full lg:w-1/2 flex flex-col items-center text-white text-center lg:text-left'>
                         <motion.h1
                         variants={container(0)} 
                         initial="hidden"
                         animate="visible"
-                        className="mx-8 pb-16 text-6xl font-thin tracking-tight lg:mt-16 lg:text-8xl">
+                        className="mx-8 pb-16 text-6xl font-thin tracking-tight  lg:mt-16 lg:text-8xl">
                             Jhon Mark
                         </motion.h1>
                         <motion.span
@@ -45,7 +45,7 @@ function Hero() {
                         initial="hidden"
                         animate="visible"
 
-                        href="/vergara-resume.docx"
+                        href="/jhonmarkvergara-resume.docx"
                         download
                         className="mx-8 mt-3  inline-block rounded bg-gray-500 px-3 py-3 text-white text-sm font-semibold hover:bg-blue-700 transition-colors md: mb-10"
                         >

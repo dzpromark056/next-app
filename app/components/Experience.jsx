@@ -20,15 +20,15 @@ const Experience = () => {
                     initial={{opacity:0, x:-100}}
                     transition={{duration:.7}}
                     className="w-full lg:w-1/4 ">
-                        <p className='mb-2 mt-10 text-sm text-neutral-400'>{experience.year}</p>
+                        <p className='mb-2 text-center mt-10 text-sm text-neutral-400'>{experience.year}</p>
                     </motion.div>
                     <motion.div 
                      whileInView={{opacity:1, x:0}}
                      initial={{opacity:0, x:100}}
                      transition={{duration:1}}
-                    className="w-full max-w-xl lg:w-1/2">
-                        <h6 className='mb-2 font-semibold'>
-                            {experience.role} - <span className='text-sm text-purple-400'>
+                    className="w-full max-w-xl lg:w-1/2 text-justify ">
+                        <h6 className='mb-2 font-semibold '>
+                            {experience.role} - <span className='text-sm  text-purple-400'>
                             {experience.company}
                             </span>
                         </h6>
