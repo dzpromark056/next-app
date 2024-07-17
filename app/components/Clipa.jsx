@@ -23,7 +23,7 @@ function Clipa() {
     }, [scrollYProgress]);
 
     return (
-        <div className='border-b border-teal-900' ref={container}>
+        <div className='border-b border-teal-900 z-10 relative' ref={container}>
             <h1 className='text-white text-center text-3xl py-10 lg:text-5xl'>Hi!</h1>
             <h1 className='text-white text-center text-3xl py-4 lg:text-5xl'>I&apos;m</h1>
 
@@ -37,6 +37,15 @@ function Clipa() {
                     }
                 </text>
             </svg>
+            <div className='absolute inset-x-0 bottom-0 h-96 overflow-hidden'>
+            <div className='absolute left-1/2 -translate-x-1/2 bottom-0
+             translate-y-1/2 h-[50px] w-full bg-blue-100/30 blur-3xl'>
+                <h1>hello</h1>
+            </div>
+            <div className='absolute left-1/2 -translate-x-1/2 bottom-0
+             translate-y-1/2 h-[75px] w-2/3 bg-blue-100/30 blur-3xl'>
+            </div>
+        </div>
         </div>
     );
 }

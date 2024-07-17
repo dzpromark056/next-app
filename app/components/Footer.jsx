@@ -25,7 +25,7 @@ function Footer({scrollProgress}) {
 
     const y = useTransform(scrollProgress, [0,1],[-700,0])
   return (
-  <div className='h-[200px]  overflow-hidden bg-black'>  
+  <div className='h-[300px]  overflow-hidden'>  
     <motion.div style={{y}} className='h-full  flex flex-wrap  py-5 md:py-0 items-center justify-center  gap-5 sm:'>
         {
             [...Array(5)].map((_,i)=>{

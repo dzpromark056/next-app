@@ -38,7 +38,7 @@ import React from 'react'
 
 const Technologies = () => {
   return (
-    <div className="border-b border-neutral-800 pb-24 ">
+    <div className="border-b border-neutral-800 pb-24 z-10 relative ">
         <motion.h2 
         whileInView={{opacity:1, y:0}}
         initial={{opacity:0, y:100}}
@@ -209,6 +209,14 @@ const Technologies = () => {
                 <FaJava className='text-7xl text-red-700'/>
             </motion.div>
         </motion.div>
+        <div className='absolute inset-x-0 bottom-0 h-96 overflow-hidden'>
+            <div className='absolute left-1/2 -translate-x-1/2 bottom-0
+             translate-y-1/2 h-[50px] w-full bg-rose-500/30 blur-3xl'>
+            </div>
+            <div className='absolute left-1/2 -translate-x-1/2 bottom-0
+             translate-y-1/2 h-[75px] w-2/3 bg-rose-500/30 blur-3xl'>
+            </div>
+        </div>
     </div>
   )
 }
