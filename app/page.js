@@ -10,6 +10,7 @@ import Contact from './components/Contact';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Awards from './components/Awards';
+import Cursor from './components/Cursor';
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -41,8 +42,8 @@ export default function Home() {
         <Experience />
         <Projects />
         <Awards />
-
         <Contact />
+        <Cursor />
       </div>
      </main>
   );

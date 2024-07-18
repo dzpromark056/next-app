@@ -3,7 +3,8 @@ import Image from 'next/image'
 import { HERO_CONTENT } from '@/constants'
 import profilePic from '../../assets/prp.jpg'
 import {motion} from 'framer-motion'
-
+import Cursor from './Cursor'
+import { useState } from 'react'
 const container = (delay) =>({
   hidden:{x:-100, opacity:0},
   visible:{
@@ -13,15 +14,19 @@ const container = (delay) =>({
   }
 })
 function Hero() {
+  const [isHovered, setIsHovered] = useState(false)
+
   return (
     <div className='border-b border-neutral-teal-900 pb-10'>
         <div className='flex flex-wrap'>
                 <div className='w-full lg:w-1/2 flex flex-col items-center text-white text-center lg:text-left'>
                         <motion.h1
+                        onMouseEnter={()=>{setIsHovered(true)}} onMouseLeave={()=>setIsHovered(false)}
+
                         variants={container(0)} 
                         initial="hidden"
                         animate="visible"
-                        className="mx-8 pb-16 text-6xl font-thin tracking-tight  lg:mt-16 lg:text-8xl">
+                        className="mx-8 pb-16 text-6xl font-thin tracking-tight z-20  lg:mt-16 lg:text-8xl">
                             Jhon Mark
                         </motion.h1>
                         <motion.span
@@ -33,10 +38,12 @@ function Hero() {
                         Full Stack Developer
                         </motion.span>
                         <motion.p
+                        onMouseEnter={()=>{setIsHovered(true)}} onMouseLeave={()=>setIsHovered(false)}
+
                         variants={container(1)} 
                         initial="hidden"
                         animate="visible"
-                        className='mx-8 my-2 max-w-xl py-6 font-light tracking-lighter'>
+                        className='mx-8 my-2 z-20 max-w-xl py-6 font-light tracking-lighter'>
                         {HERO_CONTENT}
                         </motion.p>
 
@@ -66,7 +73,7 @@ function Hero() {
 
                 </motion.div>
         </div>
-
+      <Cursor isHovered={isHovered}/>
     </div>
   )
 }

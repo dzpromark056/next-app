@@ -1,7 +1,10 @@
 import {EXPERIENCES} from '../../constants'
 import { motion } from "framer-motion"
+import Cursor from './Cursor'
+import { useState } from 'react'
 
 const Experience = () => {
+    const [isHovered, setIsHovered] = useState(false)
   return (
     <div className="border-b border-neutral-900 pb-4">
         <motion.h2 
@@ -14,13 +17,18 @@ const Experience = () => {
 
         <div>
             {EXPERIENCES.map((experience, index)=>(
-                <div key={index} className="mb-8 flex flex-wrap lg:justify-center">
+                <div 
+                
+                key={index} className="mb-8 flex flex-wrap lg:justify-center">
                     <motion.div 
                     whileInView={{opacity:1, x:0}}
                     initial={{opacity:0, x:-100}}
                     transition={{duration:.7}}
                     className="w-full lg:w-1/4 ">
-                        <p className='mb-2 text-center mt-10 text-sm text-neutral-400'>{experience.year}</p>
+                        <p 
+                        onMouseEnter={()=>{setIsHovered(true)}} onMouseLeave={()=>setIsHovered(false)}
+
+                        className='mb-2 text-center z-20 mt-10 text-sm text-neutral-400'>{experience.year}</p>
                     </motion.div>
                     <motion.div 
                      whileInView={{opacity:1, x:0}}
@@ -32,7 +40,10 @@ const Experience = () => {
                             {experience.company}
                             </span>
                         </h6>
-                        <p className='mb-4 text-neutral-400'>
+                        <p
+                        onMouseEnter={()=>{setIsHovered(true)}} onMouseLeave={()=>setIsHovered(false)}
+                        
+                        className='z-20 mb-4 text-neutral-400'>
                             {experience.description}
                         </p>
                         {experience.technologies.map((tech, index)=>(
@@ -44,6 +55,7 @@ const Experience = () => {
                
             ))}
         </div>
+        <Cursor isHovered={isHovered}/>
     </div>
   )
 }
