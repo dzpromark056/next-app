@@ -11,6 +11,9 @@ import Experience from './components/Experience';
 import Projects from './components/Projects';
 import Awards from './components/Awards';
 import Cursor from './components/Cursor';
+import Sliders from './components/Sliders';
+
+
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -40,6 +43,7 @@ export default function Home() {
         <Technologies />
         <Clipa />
         <Experience />
+        <Sliders />
         <Projects />
         <Awards />
         <Contact />

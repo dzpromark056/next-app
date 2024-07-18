@@ -6,7 +6,7 @@ import { useState } from 'react'
 const Experience = () => {
     const [isHovered, setIsHovered] = useState(false)
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <div className="border-b border-neutral-900 pb-4 h-screen ">
         <motion.h2 
         whileInView={{opacity:1, y:0}}
         initial={{opacity:0, y:-100}}
@@ -43,7 +43,7 @@ const Experience = () => {
                         <p
                         onMouseEnter={()=>{setIsHovered(true)}} onMouseLeave={()=>setIsHovered(false)}
                         
-                        className='z-20 mb-4 text-neutral-400'>
+                        className=' mb-4 text-neutral-400 '>
                             {experience.description}
                         </p>
                         {experience.technologies.map((tech, index)=>(

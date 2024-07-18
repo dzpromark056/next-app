@@ -33,9 +33,9 @@ const Contact = () => {
         </h2>
         <div className="text-center tracking-tighter">
         <p className='my-4 text-2xl text-red-600'>This Portfolio Website is not yet Done due to my computer is not Functioning well!</p>          
-            <p className='my-4 text-white'>{CONTACT.address}</p>
-            <p className="my-4 text-white">{CONTACT.phoneNo}</p>
-            <a href="#" className='text-white'>{CONTACT.email}</a>
+            <p className='my-4 text-white'>Address: {CONTACT.address}</p>
+            <p className="my-4 text-white">Phone #: {CONTACT.phoneNo}</p>
+            <a href="#" className='text-white'>Email: {CONTACT.email}</a>
 
             <p className='text-white pt-10'>
             © 2024 Vergara&apos;s Corporation. All Rights Reserved.
