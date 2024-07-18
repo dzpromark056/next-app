@@ -67,7 +67,9 @@ const About = () => {
                         <p
                         onMouseEnter={textEnter}
                         onMouseLeave={textLeave}
-                        className='mt-40 max-w-xl py-6 leading-1 text-center sm:mt-5'>{ABOUT_TEXT} </p>
+                        className='mt-40 max-w-xl py-6 leading-1 text-center sm:mt-5'>
+                        <h1 className='py-4 text-3xl'>Hover Here!</h1>
+                        {ABOUT_TEXT} </p>
                     </div>
             </motion.div>
         </div>
