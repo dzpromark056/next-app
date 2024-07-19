@@ -1,0 +1,29 @@
+.footer {
+     display: flex;
+     font-size: 12px;
+     margin-top: 40px;
+     flex-wrap: wrap;
+     align-items: flex-end;
+     text-transform: uppercase;
+     ul{
+        list-style-type: none;
+        padding: 0;
+        width: 50%;
+        overflow: hidden;
+     }
+     li{
+        span{
+            color: #9f9689;
+        }
+     }
+}
+
+@media only screen and (min-width: 1000px){
+    .footer{
+        justify-content: space-between;
+        ul{
+            width: auto;
+            padding: 0 15px;
+        }
+    }
+}

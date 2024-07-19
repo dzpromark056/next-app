@@ -19,7 +19,7 @@ function Awards() {
                  transition={{duration:0.5}}
                 className='w-full lg:w-1/2'>
                         <div className='flex flex-col items-center justify-center'>
-                            <Image src='/media/humanex.jpg' className='py-5' width={500} height={300}/>
+                            <Image src='/media/humanex.jpg' alt='image' className='py-5' width={500} height={300}/>
                             <p className='text-1xl text-center'>Finalist Philippine Startup Challenge 8 pitching competition Region1.</p>
                         </div>            
                 </motion.div>
@@ -29,7 +29,7 @@ function Awards() {
                 transition={{duration:0.5}}
                 className='w-full lg:w-1/2'>
                     <div className='flex flex-col items-center justify-center'>
-                            <Image src='/media/file.png' width={500} height={300}/>
+                            <Image src='/media/file.png' alt='image' width={500} height={300}/>
                             <p className='text-1xl text-center'>Research Symposium.</p>
                     </div>
                 </motion.div>

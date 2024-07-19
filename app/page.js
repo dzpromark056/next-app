@@ -12,7 +12,7 @@ import Projects from './components/Projects';
 import Awards from './components/Awards';
 import Cursor from './components/Cursor';
 import Sliders from './components/Sliders';
-
+import Header from './components/header'
 
 export default function Home() {
   useEffect(() => {
@@ -36,8 +36,8 @@ export default function Home() {
 
   return (
     <main className="overflow-hidden relative min-h-screen antialiased ">
+      <Header />
       <div className="mx-auto  px-5">
-        <Navbar />
         <Hero />
         <About />
         <Technologies />
