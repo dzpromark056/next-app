@@ -29,7 +29,7 @@ const Contact = () => {
   return (
     <div className='border-b border-neutral-900 '>
         <h2 className='py-10 mt-5 text-center text-4xl text-white'>
-                Get in Touch
+                Get in Touch!
         </h2>
         <div className="text-center tracking-tighter">
         <p className='my-4 text-2xl text-red-600'>This Portfolio Website is not yet Done due to my computer is not Functioning well!</p>          
