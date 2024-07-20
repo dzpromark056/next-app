@@ -13,7 +13,7 @@ import Awards from './components/Awards';
 import Cursor from './components/Cursor';
 import Sliders from './components/Sliders';
 import Header from './components/header'
-
+import Relatedproject from './components/relatedproject'
 export default function Home() {
   useEffect(() => {
     const lenis = new Lenis();
@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <main className="overflow-hidden relative min-h-screen antialiased ">
       <Header />
-      <div className="mx-auto  px-5">
+      <div className="mx-auto  px-5 ">
         <Hero />
         <About />
         <Technologies />
@@ -45,6 +45,7 @@ export default function Home() {
         <Experience />
         <Sliders />
         <Projects />
+        <Relatedproject />
         <Awards />
         <Contact />
         <Cursor />
