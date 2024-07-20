@@ -6,7 +6,7 @@ import  { useEffect, useRef } from 'react';
 import { useScroll } from 'framer-motion'
 const Contact = () => {
 
-  const container = useRef();
+  const container = useRef(null);
     const texts = useRef([]);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -41,8 +41,10 @@ const Contact = () => {
             © 2024 Vergara&apos;s Corporation. All Rights Reserved.
             </p>
         </div>
-        <Footer  scrollProgress={scrollYProgress}/>
-
+        <div ref={container} className='container relative'>
+        {/* Example usage with Footer */}
+        <Footer scrollProgress={scrollYProgress} />
+         </div>
     </div>
     
   );

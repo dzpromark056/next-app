@@ -8,7 +8,7 @@ import { useScroll, useTransform, motion } from 'framer-motion'
 
 function Sliders() {
 
-const container = useRef()
+const container = useRef(null)
 const {scrollYProgress} = useScroll({
     target:container,
     offset: ['start end', 'end start']

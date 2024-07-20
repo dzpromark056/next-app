@@ -4,7 +4,7 @@ import { useRef, useEffect } from 'react';
 import {motion} from 'framer-motion'
 function Footer({scrollProgress}) {
 
-    const container = useRef();
+    const container = useRef(null);
     const texts = useRef([]);
     const { scrollYProgress } = useScroll({
         target: container,
@@ -26,7 +26,7 @@ function Footer({scrollProgress}) {
     const y = useTransform(scrollProgress, [0,1],[-700,0])
   return (
   <div className='h-[300px]  overflow-hidden'>  
-    <motion.div style={{y}} className='h-full  flex flex-wrap  py-5 md:py-0 items-center justify-center  gap-5 sm:'>
+    <motion.div ref={container} style={{y}} className='h-full  flex flex-wrap  py-5 md:py-0 items-center justify-center  gap-5 sm:'>
         {
             [...Array(5)].map((_,i)=>{
                 return <img className='h-[80px] w-[80px]' key={i + 'i'} src={`./media/${i +1}.jpg`} alt="" />
